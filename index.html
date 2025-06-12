@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>G3X24 Ultra Staking Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #0f0f23, #1a1a2e);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        button {
+            background-color: orange;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        input, select {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>G3X24 Ultra Staking</h1>
+    <button id="connectButton">Connect Wallet</button>
+    <p>Wallet: <span id="walletAddress"></span></p>
+
+    <input type="number" id="amountInput" placeholder="Amount to stake">
+    <select id="tierSelect">
+        <option value="90">90 Days</option>
+        <option value="180">180 Days</option>
+        <option value="270">270 Days</option>
+        <option value="365">365 Days</option>
+    </select>
+
+    <button id="approveButton">Approve</button>
+    <button id="stakeButton">Stake</button>
+
+    <h2>Manage Stakes</h2>
+    <input type="number" id="stakeIndexInput" placeholder="Stake Index">
+    <button id="claimButton">Claim Rewards</button>
+    <button id="unstakeButton">Unstake</button>
+</div>
+
+<script src="abi.js"></script>
+<script src="ultra.js"></script>
+</body>
+</html>
